@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+/* Header */
+nav {
+  background-color: #e3bc0b;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 100px;
+  z-index: 2;
+}
+.logo {
+  line-height: 70px;
+  padding: 0 100px;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+  left: 40px;
+  cursor: pointer;
+}
+nav ul {
+  float: right;
+  margin-right: 40px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 70px;
+  margin: 0 5px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  margin-left: 20px;
+}
+.check {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 70px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+/* Media query for logo and navbar */
+@media (max-width: 950px) {
+  label .logo {
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 850px) {
+  .check {
+    display: block;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 60vh;
+    background-color: #e3bc0b;
+    top: 80px;
+    transition: all 0.5s;
+    left: -100%;
+    text-align: center;
+  }
+  nav ul li {
+    display: block;
+    color: black;
+  }
+  nav ul li a {
+    font-size: 20px;
+    background: none;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .check {
+    margin-right: 20px;
+  }
+}
+.main-nav ul li a:hover {
+  color: rgb(0, 136, 240);
+}
+
+/* Dropdown Button */
+.dropdown-menu li{
+display: block;
+background-color: #e3bc0b;
+}
+.dropdown-menu{
+  background-color: #e3bc0b;
+}
+/* Heading css */
+.heading{
+  margin-top: 7rem;
+}
+/* Cards css */
+.cards-img{
+  width: 3.80rem;
+}
+.card {
+  text-align: center;
+  padding-top: 20px;
+  margin: 18px 0;
+  height: 208px;
+  border-radius: 6px;
+  background-color: #F8F8F9;
+}
+/* Footer css */
+.sophros{
+  font-size: 26px;
+  margin-top: 28px;
+}
+.sophros::before{
+    content: "SOPHROS";
+    position: absolute;
+    top:-8px;
+    font-size: 2.70rem;
+    color: #1D63FF;
+    text-shadow: -4px 0 3px black;
+}
+.footer{
+  color: #000;
+  background-color: #e3bc0b;
+}
+.icon-sz{
+  font-size: 1.74rem;
+}
+.link a{
+  margin: 2.8px 0;
+  color: #000;
+}
+.copyright{
+  border-radius: 6.25rem;
+  background-color: black;
+}
+/* Media query for cards and footer*/
+@media (min-width:768px) and (max-width:1080px) {
+  .card {
+    height: 250px;
+  }
+  .sophros {
+    font-size: 20px;
+  }
+  .sophros::before {
+    font-size: 2.07rem;
+    top: -2px;
+  }
+}
+@media (max-width:767px)
+{
+  .footer-pw #icon{
+      justify-content: center;
+  }
+  .copyright-font{
+    font-size: 13px;
+  }
+}
